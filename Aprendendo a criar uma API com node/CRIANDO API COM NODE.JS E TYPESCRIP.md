@@ -60,6 +60,22 @@ Você pode baixar também o ESlint, o ESlint serve para auxiliar os programadore
 
 **código: npm init @eslint/config@latest**
 
+**Configurando o servidor para ler os bodys como Json**
+Quando o usuário envia uma requisição se for do tipo POST provavelmente o servidor irá esperar que o usuario tenha enviado no corpo da requisição alguma informação. E como você queira receber esses dados como um Json, você precisa criar um Middleware que irá converter todos os dados para um Json.
+
+o middleware precisa ser criado para o servidor.
+(no arquivo de configuração do seu servidor) -> *server.use(express.json());*
+
+Assim o servidor irá converter todos os dados recebidos em Json.
+
+**Recebendo parametros na URL /:nome**
+Para receber um parametro na URL você precisa indicar na criação da rota como esse parametro precisa ser enviado, exemplo: "/usuarios/:nome"
+
+Nesse caso você já está dizendo ao servidor que esse endpoint necessita de um parametro na URL chamado "nome". Toda vez que alguem enviar o parametro "/usuario/guilherme", você pode pegar essa informação com o objeto "req" que contém um atributo chamado params, esse atributo guarda todos os parametros enviados na URL.
+req.params.{nome do parametro} no caso do exemplo seria "nome" (req.params.nome);
+
+**Como converter o código TS para JS em produção**
+Vamos utilizar uma ferramenta chamada 'tsc', ela já é uma ferramenta nativa do typescript que gera automaticamente o código Js (JavaScript).
 
 
 

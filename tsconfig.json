@@ -3,8 +3,8 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "./dist", // Essa configuração cria a pasta ./dist para salvar os arquivos Js.
+    "rootDir": "./src", // Essa configuração diz para o compilador qual a pasta raiz dos arquivos Ts.
     "target": "es6"
   }
 }

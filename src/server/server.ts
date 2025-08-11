@@ -1,12 +1,12 @@
 
 import express from "express";
+import { routerMensagem } from "./routes/mensagemRouter";
+import 'dotenv/config';
 
-const app = express()
+const app = express();
 
+app.use(express.json());
 
-app.get("/hello",(req, res) => {
-    return res.send("Olá, DEV!");
-});
+app.use("/mensagem", routerMensagem);
 
-
-export{ app } 
+export{ app };
