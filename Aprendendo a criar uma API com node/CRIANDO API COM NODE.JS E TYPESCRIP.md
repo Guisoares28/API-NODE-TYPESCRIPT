@@ -91,7 +91,11 @@ src| -> Pasta raiz do projeto.
             services| -> Tudo que é acesso externo.
             middlewares| -> Arquivos das funções middlewares para usarmos antes das requisições.
         
-    
+**Validação dos dados**
+Para validar os dados que entraram na nossa aplicação pelas requisições, nesse projeto vamos utilizar a biblioteca "yup".
+a lib yup é responsável por validar os dados de uma forma mais fácil.
+instalação: npm i yup
+(Leia a documentação para mais informações)!
 
 
 
