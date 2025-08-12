@@ -1,12 +1,12 @@
 
 import express from "express";
-import { routerMensagem } from "./routes/mensagemRouter";
 import 'dotenv/config';
+import { cidadeRouter } from "../routes/cidadeRouter";
 
 const app = express();
 
 app.use(express.json());
 
-app.use("/mensagem", routerMensagem);
+app.use("/cidade", cidadeRouter);
 
 export{ app };
