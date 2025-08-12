@@ -76,6 +76,22 @@ req.params.{nome do parametro} no caso do exemplo seria "nome" (req.params.nome)
 
 **Como converter o código TS para JS em produção**
 Vamos utilizar uma ferramenta chamada 'tsc', ela já é uma ferramenta nativa do typescript que gera automaticamente o código Js (JavaScript).
+Você precisa instalar o tsc 
+- 'npm install -g typescript';
+- tsc --init (Para iniciar o arquivo tsconfig);
+- tsc (Gera os arquivos).
+
+**Estruturas de Pastas API**
+src| -> Pasta raiz do projeto.
+    server| -> Arquivo de config do servidor.
+        controllers| -> Arquivos de controladores.
+        database| -> Arquivos de configuração do banco de dados.
+        routes| -> Arquivos dos nossos roteadores.
+        shared| -> Arquivos que são compartilhados por todo projeto.
+            services| -> Tudo que é acesso externo.
+            middlewares| -> Arquivos das funções middlewares para usarmos antes das requisições.
+        
+    
 
 
 
