@@ -1,19 +1,17 @@
 import { Request, Response } from "express";
-import { CidadeModel } from "../models/cidadeModel";
 import { CidadeService } from "../services/cidadeService";
+import { Cidade, CidadeSchema } from "../dtos/cidadeDTO";
 
 class CidadeController{
     
-    static createCidade(req: Request, res: Response){
-        const cidadeData: CidadeModel = req.body;
-        if(cidadeData.nome === undefined){
-            res.json({message:"Nome da cidade não informado!"})
+    static async createCidade(req: Request, res: Response){
+        const data: Cidade = req.body;
+        const result = await CidadeSchema.validarSchema(data);
+        if("sucesso" in result){
+            res.json({message:`Cidade ${data.nome} adicionada com sucesso!`})
         }
-        const adicionado = CidadeService.addCidade(cidadeData);
-        if(!adicionado){
-            res.json({message:"Houve um erro ao adicionar a cidade!"})
-        }
-        res.json({message: `Cidade ${cidadeData.nome} adicionada com sucesso!`})
+        
+        res.send(result);
     }
 }
 
