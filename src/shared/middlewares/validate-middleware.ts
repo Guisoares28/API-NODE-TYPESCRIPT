@@ -1,6 +1,5 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
 import * as yup from "yup";
-import { Cidade } from "../../modules/cidade/cidadeSchema";
 
 export const validateSchema = (schema:yup.Schema): RequestHandler => {
     return async (req:Request, res:Response, next:NextFunction) =>{
