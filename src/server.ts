@@ -1,7 +1,7 @@
 
 import express from "express";
 import 'dotenv/config';
-import { cidadeRouter } from "../routes/cidadeRouter";
+import { cidadeRouter } from "./modules/cidade/cidadeRouter"
 
 const app = express();
 

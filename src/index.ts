@@ -1,4 +1,4 @@
-import { app } from "./config/server";
+import { app } from "./server";
 
 var PORT = process.env.PORT || 3333;
 

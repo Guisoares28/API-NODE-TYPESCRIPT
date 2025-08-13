@@ -1,8 +1,7 @@
-import { cidadeDB } from "../config/database";
-import { Cidade } from "../dtos/cidadeDTO";
-import { CidadeModel } from "../models/cidadeModel";
+import { cidadeDB } from "../../config/database";
+import { Cidade } from "./cidadeSchema";
 
-class CidadeService{
+export class CidadeService{
     static addCidade(cidade: Cidade): boolean{
         try {
             cidadeDB.push(cidade);
@@ -13,4 +12,4 @@ class CidadeService{
     }
 }
 
-export{ CidadeService };
+
