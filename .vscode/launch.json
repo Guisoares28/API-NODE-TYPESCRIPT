@@ -1,0 +1,8 @@
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug TS",
+  "runtimeExecutable": "node",
+  "runtimeArgs": ["-r", "ts-node/register"],
+  "args": ["${workspaceFolder}/src/app.ts"]
+}
