@@ -6,7 +6,7 @@ import { cidadeSchema } from "./cidadeSchema";
 export const cidadeRouter = express.Router();
 
 cidadeRouter.post("/", 
-    validateSchema(cidadeSchema),
+    validateSchema("body",cidadeSchema),
     CidadeController.createCidade,
     );
 
