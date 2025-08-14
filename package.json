@@ -13,10 +13,14 @@
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.25",
     "yup": "^1.7.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
     "globals": "^16.3.0",
     "jiti": "^2.5.1",
     "ts-node-dev": "^2.0.0",

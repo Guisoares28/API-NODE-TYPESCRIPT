@@ -5,6 +5,8 @@
     "moduleResolution": "node",
     "outDir": "./dist", // Essa configuração cria a pasta ./dist para salvar os arquivos Js.
     "rootDir": "./src", // Essa configuração diz para o compilador qual a pasta raiz dos arquivos Ts.
-    "target": "es6"
+    "target": "es6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   }
 }
